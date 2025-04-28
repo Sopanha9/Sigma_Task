@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Tagesschrift", system-ui;
+    box-sizing: border-box;
+}
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg,#1c2b48,#4e085f );
+    padding: 15px;
+}
+
+/* img {
+    width: 30px;
+} */
+
+.todo_app {
+    width: 100%;
+    max-width: 600px;
+    background: rgb(196, 190, 190);
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+.todo_app h2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo_app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #9e9a9a;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    background: #9e9a9a;
+}
+
+button {
+    background: #9e9a9a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+button:hover {
+    background: #8f8b8b;
+    transform: scale(1.1);
+}
+
+ul li {
+    list-style: none;
+    font-size: 15px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: ' ';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(/To-Do-Img/images/unchecked.png);
+    background-position: center;
+    background-size: cover;
+    top:6px;
+    left: 8px;
+}
+/* ul li.checked {
+    color: #555
+    text-decoration: line-thorough;
+} */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url(/To-Do-Img/images/checked.png);
+    
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+ul li span:hover {
+    background: #edeef0;
+    background-color: #9e9a9a;
+    border-radius: 50%;
+    transform: scale(1.1);
+}
